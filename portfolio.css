@@ -1,0 +1,201 @@
+/* ============================================
+   HOJA DE ESTILO EXTERNA - portfolio.css
+   Temática: Portfolio Personal
+   Paleta: Tonos crema, teal oscuro y dorado
+   ============================================ */
+
+/* --- Importación de Google Fonts ---
+   "Playfair Display" para titulares: elegante, editorial
+   "Roboto" para párrafos: legible, mediana (peso 500) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+
+/* --- Variables de color (paleta portfolio) ---
+   Centralizar los colores aquí permite cambiarlos fácilmente */
+:root {
+    --color-fondo-pagina: #1a1a2e;       /* Azul noche oscuro: fondo general */
+    --color-fondo-div: #f9f6f0;          /* Crema muy claro: fondo del contenedor */
+    --color-borde: #d4c5a9;              /* Beige claro: borde sutil */
+    --color-titular: #0f3460;            /* Azul profundo: color del h1 */
+    --color-acento: #c9a84c;             /* Dorado: línea decorativa */
+    --color-texto: #3d3d3d;              /* Gris oscuro: párrafos */
+    --color-etiqueta: #0f3460;           /* Azul profundo: etiquetas de habilidades */
+    --color-etiqueta-fondo: #e8f0fe;     /* Azul muy claro: fondo de etiquetas */
+}
+
+/* --- Reset y estilos base del body --- */
+body {
+    /* Fondo oscuro para que el contenedor crema resalte */
+    background-color: var(--color-fondo-pagina);
+
+    /* Elimina márgenes por defecto del navegador */
+    margin: 0;
+    padding: 0;
+
+    /* Fuente de respaldo para todo el body */
+    font-family: 'Roboto', sans-serif;
+
+    /* Patrón sutil de fondo usando gradiente */
+    background-image: radial-gradient(circle at 20% 50%, #16213e 0%, #1a1a2e 60%);
+    min-height: 100vh; /* Ocupa al menos toda la altura de pantalla */
+}
+
+
+/* =============================================
+   CONTENEDOR PRINCIPAL - respeta parámetros:
+   80% ancho, centrado, borde sutil, 20px margen,
+   15px padding, fondo gris/crema muy claro
+   ============================================= */
+.contenedor {
+
+    /* Ancho del 80% de la pantalla */
+    width: 80%;
+
+    /* Centrado horizontal + margen superior e inferior de 20px */
+    margin: 20px auto;
+
+    /* Espacio interno entre el borde y el contenido: 15px */
+    padding: 15px;
+
+    /* Fondo crema muy claro (variante portfolio del "gris muy claro") */
+    background-color: var(--color-fondo-div);
+
+    /* Borde sutil de color claro (beige/dorado tenue) */
+    border: 1px solid var(--color-borde);
+
+    /* Bordes levemente redondeados: aspecto moderno */
+    border-radius: 4px;
+
+    /* Sombra para dar profundidad y separar del fondo oscuro */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* --- Línea dorada decorativa en la parte superior del div ---
+   Es un elemento decorativo extra que no rompe los parámetros */
+.contenedor::before {
+    content: '';               /* Pseudo-elemento vacío */
+    display: block;            /* Se comporta como bloque */
+    height: 3px;               /* Línea fina */
+    background: linear-gradient(to right, var(--color-acento), transparent);
+    margin-bottom: 20px;       /* Espacio antes del contenido */
+    border-radius: 2px;
+}
+
+
+/* =============================================
+   TITULAR H1 - Times New Roman, tamaño mayor
+   ============================================= */
+.contenedor h1 {
+
+    /* Fuente: Times New Roman (serif clásica, elegante para portfolio) */
+    font-family: 'Times New Roman', Times, serif;
+
+    /* Tamaño mayor que el texto normal */
+    font-size: 2.2rem;
+
+    /* Estilo normal (no cursiva) */
+    font-style: normal;
+
+    /* Peso negrita para jerarquía visual */
+    font-weight: 700;
+
+    /* Color azul profundo (paleta portfolio) */
+    color: var(--color-titular);
+
+    /* Sin margen arriba; espacio abajo antes del subtítulo */
+    margin: 0 0 6px 0;
+
+    /* Espaciado entre letras para look editorial */
+    letter-spacing: -0.5px;
+}
+
+/* --- Subtítulo (h2) debajo del nombre --- */
+.contenedor h2 {
+    font-family: 'Times New Roman', Times, serif;  /* Misma familia que h1 */
+    font-size: 1rem;                               /* Tamaño menor, secundario */
+    font-style: italic;                            /* Cursiva para diferenciarlo */
+    font-weight: 400;
+    color: var(--color-acento);                    /* Dorado: destaca la especialidad */
+    margin: 0 0 16px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;                     /* En mayúsculas para distinción */
+}
+
+/* --- Línea separadora --- */
+.contenedor hr {
+    border: none;                          /* Sin borde por defecto */
+    border-top: 1px solid var(--color-borde); /* Línea sutil beige */
+    margin: 16px 0;                        /* Espacio arriba y abajo */
+}
+
+/* --- Títulos de sección (h3) --- */
+.contenedor h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    color: var(--color-titular);
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/* =============================================
+   PÁRRAFOS - Roboto, peso mediano, estilo normal
+   ============================================= */
+.contenedor p {
+
+    /* Fuente: Roboto importada de Google Fonts */
+    font-family: 'Roboto', sans-serif;
+
+    /* Peso 500 = mediana (entre normal 400 y negrita 700) */
+    font-weight: 500;
+
+    /* Estilo normal (no cursiva, no oblicua) */
+    font-style: normal;
+
+    /* Tamaño estándar de cuerpo */
+    font-size: 0.95rem;
+
+    /* Interlineado: mejora lectura en párrafos largos */
+    line-height: 1.75;
+
+    /* Color texto: gris oscuro cálido */
+    color: var(--color-texto);
+
+    /* Espacio debajo de cada párrafo */
+    margin-bottom: 12px;
+}
+
+
+/* =============================================
+   ETIQUETAS DE HABILIDADES (elementos extras)
+   ============================================= */
+
+/* Contenedor de las etiquetas */
+.habilidades {
+    display: flex;          /* Acomoda las etiquetas en fila */
+    flex-wrap: wrap;        /* Si no caben, pasan a la siguiente línea */
+    gap: 8px;               /* Espacio entre etiquetas */
+    margin-top: 8px;
+}
+
+/* Cada etiqueta individual */
+.tag {
+    background-color: var(--color-etiqueta-fondo); /* Fondo azul muy claro */
+    color: var(--color-etiqueta);                  /* Texto azul profundo */
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 4px 12px;                             /* Relleno interno de la etiqueta */
+    border-radius: 20px;                           /* Forma de píldora */
+    border: 1px solid #c5d5f5;                     /* Borde azul muy sutil */
+    letter-spacing: 0.3px;
+}
+
+/* Etiqueta dorada especial */
+.tag.destacado {
+    background-color: #fdf3dc;
+    color: #8a6914;
+    border-color: var(--color-acento);
+}

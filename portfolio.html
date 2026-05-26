@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- DOCTYPE declara que usamos HTML5 -->
+
+<html lang="es">
+<!-- lang="es" indica idioma español al navegador y lectores de pantalla -->
+
+<head>
+    <!-- Sección de metadatos: no visible en la página -->
+
+    <!-- Codificación UTF-8: permite usar tildes, ñ y caracteres especiales -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport: hace que la página se adapte a pantallas de celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Portfolio Personal | Diseñadora Web</title>
+
+    <!-- *** VINCULACIÓN DE LA HOJA DE ESTILO EXTERNA ***
+         Conecta este HTML con el archivo portfolio.css
+         Deben estar en la misma carpeta para que funcione -->
+    <link rel="stylesheet" href="portfolio.css">
+
+</head>
+
+<body>
+    <!-- Todo el contenido visible va dentro del body -->
+
+    <!-- =============================================
+         DIV PRINCIPAL - clase "contenedor"
+         La clase conecta con los estilos de portfolio.css
+         Parámetros aplicados:
+         ✔ 80% de ancho
+         ✔ Centrado con margin: auto
+         ✔ Margen de 20px
+         ✔ Padding (margen interno) de 15px
+         ✔ Fondo crema muy claro
+         ✔ Borde sutil de color claro
+         ============================================== -->
+    <div class="contenedor">
+
+        <!-- Titular principal en Times New Roman (tamaño mayor) -->
+        <h1>María González</h1>
+
+        <!-- Subtítulo con especialidad -->
+        <h2>Diseñadora Web & Desarrolladora Front-End</h2>
+
+        <!-- Línea separadora decorativa -->
+        <hr>
+
+        <!-- Sección: Sobre mí -->
+        <!-- El h3 usa Times New Roman como el h1 pero más pequeño -->
+        <h3>Sobre mí</h3>
+
+        <!-- Párrafos con fuente Roboto, peso mediano, estilo normal -->
+        <p>
+            Soy diseñadora web apasionada por crear experiencias digitales que combinan
+            <strong>estética visual</strong> con <strong>funcionalidad técnica</strong>.
+            Me especializo en interfaces limpias, accesibles y con identidad propia.
+        </p>
+
+        <p>
+            Actualmente estudio Diseño Multimedia y aplico mis conocimientos en proyectos
+            reales que van desde sitios portfolios hasta aplicaciones interactivas.
+        </p>
+
+        <!-- Línea separadora -->
+        <hr>
+
+        <!-- Sección: Habilidades -->
+        <h3>Habilidades técnicas</h3>
+
+        <p>Tecnologías y herramientas con las que trabajo a diario:</p>
+
+        <!-- Contenedor de etiquetas de habilidades -->
+        <!-- Cada "tag" es una pequeña cápsula visual -->
+        <div class="habilidades">
+            <span class="tag destacado">HTML5</span>   <!-- Etiqueta dorada especial -->
+            <span class="tag destacado">CSS3</span>    <!-- Etiqueta dorada especial -->
+            <span class="tag">JavaScript</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Responsive Design</span>
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">WordPress</span>
+        </div>
+
+        <!-- Línea separadora -->
+        <hr>
+
+        <!-- Sección: Proyecto destacado -->
+        <h3>Proyecto destacado</h3>
+
+        <p>
+            <strong>Rediseño de sitio institucional</strong> — Relevamiento UX, prototipado
+            en Figma e implementación en HTML/CSS puro. El resultado fue una mejora del
+            40% en tiempo de carga y una interfaz completamente responsiva.
+        </p>
+
+        <!-- Línea separadora -->
+        <hr>
+
+        <!-- Sección: Contacto -->
+        <h3>Contacto</h3>
+
+        <!-- Párrafo de cierre con datos de contacto ficticios -->
+        <p>
+            📩 mariagonzalez@portfolio.com &nbsp;|&nbsp;
+            🔗 linkedin.com/in/mariagonzalez &nbsp;|&nbsp;
+            💻 github.com/mariagonzalez
+        </p>
+
+    </div>
+    <!-- Fin del div.contenedor -->
+
+</body>
+<!-- Fin del contenido visible -->
+
+</html>
+<!-- Fin del documento -->
